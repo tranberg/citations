@@ -1,5 +1,37 @@
+// Script by Bo Tranberg
+// http://botranberg.dk
+// https://github.com/tranberg/citations
+//
+// This script requires jQuery and jQuery UI
+
 $(function() {
-  // Definitions of citation dialog
+  // Inser html for dialog just before the button to open it
+  var butt = document.getElementById( 'opener' );
+  butt.insertAdjacentHTML( 'beforeBegin',
+                            '\
+                            <div id="dialog" title="Cite this paper" style="text-align:left"> \
+                              <p style="text-align: center">Copy and paste one of the formatted citations into your bibliography manager.</p> \
+                              <table style="border-collapse:separate; border-spacing:2em"> \
+                                <tr style="vertical-align:top;"> \
+                                  <td><strong>APA</strong></td> \
+                                  <td><span id="APA1"></span><span id="APA2"></span><span id="APA3"></span><span id="APA4" style="font-style: italic"></span></td> \
+                                </tr> \
+                                <tr style="vertical-align:top;"> \
+                                  <td><strong>Bibtex</strong></td> \
+                                  <td> \
+                                    @article{<span id="bibtag"></span>,<br> \
+                                    &nbsp;&nbsp;&nbsp;&nbsp;title={<span id="bibtitle"></span>},<br> \
+                                    &nbsp;&nbsp;&nbsp;&nbsp;author={<span id="bibauthor"></span>},<br> \
+                                    &nbsp;&nbsp;&nbsp;&nbsp;journal={<span id="bibjournal"></span>},<br> \
+                                    &nbsp;&nbsp;&nbsp;&nbsp;year={<span id="bibyear"></span>},<br> \
+                                    &nbsp;&nbsp;&nbsp;&nbsp;url={<span id="biburl"></span>},<br> \
+                                    } \
+                                  </td> \
+                                </tr> \
+                              </table> \
+                            </div>');
+
+  // Definitions of citations dialog
   $( "#dialog" ).dialog({
       autoOpen: false,
       maxWidth:600,
@@ -41,7 +73,11 @@ $(function() {
   }
 
   // Populate formatted citations in Bibtex
-  var title = $("meta[name='citation_title']").attr('content').slice(2)
+  var title = $("meta[name='citation_title']").attr('content')
+  // The following test might seem stupid, but it's needed because some php function at OpenPsych appends two whitespaces to the start of the title in the meta data
+  if (title[1] == ' ') {
+    title = title.slice(2)
+  }
   var journal = $("meta[name='citation_journal_title']").attr('content')
   var pubyear = $("meta[name='citation_publication_date']").attr('content').substring(0,4)
   var puburl = document.URL
