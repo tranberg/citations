@@ -6,8 +6,8 @@
 
 $(function() {
   // Inser html for dialog just before the button to open it
-  var butt = document.getElementById( 'opener' );
-  butt.insertAdjacentHTML( 'beforeBegin',
+  var butt = document.getElementById('citations');
+  butt.insertAdjacentHTML('beforeBegin',
                             '\
                             <div id="dialog" title="Cite this paper" style="text-align:left"> \
                               <p style="text-align: center">Copy and paste one of the formatted citations into your bibliography manager.</p> \
@@ -32,18 +32,18 @@ $(function() {
                             </div>');
 
   // Definitions of citations dialog
-  $( "#dialog" ).dialog({
+  $("#dialog").dialog({
       autoOpen: false,
       maxWidth:600,
       maxHeight: 600,
       width: 600,
-      height: 350,
+      height: 400,
       modal: true,
       });
 
   // Open citation dialog on click
-  $( "#opener" ).click(function() {
-      $( "#dialog" ).dialog( "open" );
+  $("#citations").click(function() {
+      $("#dialog").dialog("open");
   });
 
   // Find authors
