@@ -14,7 +14,7 @@ To use this script just include the following scripts in the header of your .htm
 
 Place the following html where you want the button to appear:
 
-`<button id="opener">Cite this paper</button>`
+`<button id="citations">Cite this paper</button>`
 
 Now just press the button *Cite this paper* to see the dialog with the formatted citations.
 
