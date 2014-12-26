@@ -112,9 +112,10 @@ $(function() {
                   author = author+', & '
               }
           }
-          author = author+metas[i].getAttribute("content").substr(0,metas[i].getAttribute("content").indexOf(' ')+2)+'.'
-          if (metas[i].getAttribute("content").indexOf(' ') < metas[i].getAttribute("content").lastIndexOf(' ')) {
-              var addNames = metas[i].getAttribute("content").substr(metas[i].getAttribute("content").indexOf(' ')+1)
+
+          author = author+metas[i].getAttribute("content").substr(0,metas[i].getAttribute("content").indexOf(', ')+3)+'.'
+          if (metas[i].getAttribute("content").indexOf(', ') < metas[i].getAttribute("content").lastIndexOf(' ')-1) {
+              var addNames = metas[i].getAttribute("content").substr(metas[i].getAttribute("content").lastIndexOf(' '))
               author = author+addNames.substr(addNames.indexOf(' '))
           }
       }
