@@ -113,9 +113,12 @@ $(function() {
               }
           }
 
+          // Append author string with the surnames and first letter of next author's name
           author = author+metas[i].getAttribute("content").substr(0,metas[i].getAttribute("content").indexOf(', ')+3)+'.'
+          // If the author has several names, append the first letter of these to the string
           if (metas[i].getAttribute("content").indexOf(', ') < metas[i].getAttribute("content").lastIndexOf(' ')-1) {
-              var addNames = metas[i].getAttribute("content").substr(metas[i].getAttribute("content").lastIndexOf(' '))
+              var extraNames = metas[i].getAttribute("content").substr(metas[i].getAttribute("content").indexOf(', ')+2)
+              var addNames = extraNames.substr(extraNames.indexOf(' '))
               author = author+addNames.substr(addNames.indexOf(' '))
           }
       }
