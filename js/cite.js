@@ -34,12 +34,20 @@ $(function() {
   // Definitions of citations dialog
   $("#dialog").dialog({
       autoOpen: false,
+      show: {
+          effect: "fade",
+          duration: 200
+      },
+      hide: {
+          effect: "fade",
+          duration: 200
+      },
       maxWidth:600,
       maxHeight: 600,
-      width: 600,
+      width: 640,
       height: 400,
       modal: true,
-      });
+  });
 
   // Open citation dialog on click
   $("#citations").click(function() {
@@ -89,7 +97,7 @@ $(function() {
   else {
       var startTitle = title.substr(0,title.indexOf(' '));
   }
-  $('#bibtag').html(firstAuthor+pubyear+startTitle)
+  $('#bibtag').html(firstAuthor+pubyear)
   $('#bibtitle').html(title)
   $('#bibauthor').html(author)
   $('#bibjournal').html(journal)
