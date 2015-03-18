@@ -10,7 +10,7 @@ $(function() {
   butt.insertAdjacentHTML('beforeBegin',
                             '\
                             <div id="dialog" title="Cite this paper" style="text-align:left"> \
-                              <p style="text-align: center">Copy and paste one of the formatted citations into your bibliography manager.</p> \
+                              <p style="text-align: center;"><b>Copy and paste one of the formatted citations into your bibliography manager.</b></p> \
                               <table style="border-collapse:separate; border-spacing:2em"> \
                                 <tr style="vertical-align:top;"> \
                                   <td><strong>APA</strong></td> \
@@ -44,7 +44,7 @@ $(function() {
       },
       maxWidth:600,
       maxHeight: 600,
-      width: 640,
+      width: 660,
       height: 400,
       modal: true,
   });
