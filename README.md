@@ -35,4 +35,4 @@ As of now the included libraries are:
 - jQuery v1.11.1
 - jQuery UI - v1.11.2
 
-I only included the parts of jQuery neccesary for the dialog and fade effect. See [this link](http://jqueryui.com/download/#!version=1.10.4&components=1111101000010100000010000010000000) for customisation and choice of theme for CSS.
+I only included the parts of jQuery UI neccesary for the dialog and fade effect. See [this link](http://jqueryui.com/download/#!version=1.10.4&components=1111101000010100000010000010000000) for customisation and choice of CSS theme.
