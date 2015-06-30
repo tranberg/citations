@@ -18,16 +18,13 @@ Place the following html where you want the button to appear:
 
 Now just press the button *Cite this paper* to see the dialog with the formatted citations.
 
-A demo of the script can be seen in *demo.html*.
-
 Notes
 -----
 The script was originally made for [OpenPsych](http://openpsych.net) where you can [see it in action](http://openpsych.net/ODP/2014/07/ethnicrace-differences-in-aptitude-by-generation-in-the-united-states-an-exploratory-meta-analysis/).
 
-As of March 2015 it is also featured in *Mankind Quarterly* ([example](http://mankindquarterly.org/archive/paper.php?p=759)).
+As of March 2015 it is also featured in [Mankind Quarterly](http://mankindquarterly.org), [example](http://mankindquarterly.org/archive/paper.php?p=759).
 
-Read more about this script on [my blog](http://botranberg.dk/post/update-formatted-citations/).
-
+A demo of the script can be seen in *demo.html*.
 
 Dependencies
 ------------
