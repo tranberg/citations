@@ -90,7 +90,11 @@ $(function() {
     var pubyear = $("meta[name='citation_publication_date']").attr('content').substring(0,4)
     var puburl = document.URL
     // Build a string for the Bibtex tag
-    var firstAuthor = author.substr(0,author.indexOf(','));
+    if (author.indexOf(',') < author.indexOf(' ')) {
+        var firstAuthor = author.substr(0,author.indexOf(','));
+    } else {
+        var firstAuthor = author.substr(0,author.indexOf(' '));
+    };
     if (title.indexOf(',')<title.indexOf('0')) {
         var startTitle = title.substr(0,title.indexOf(','));
     } else {
